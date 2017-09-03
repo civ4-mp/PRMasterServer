@@ -314,7 +314,7 @@ class SBQRServer:
         flags_buffer += byteencode.uint16(host.data.get('localport', 6500))
         msg += flags_buffer
         for field in defaultfields:
-            msg += host.data[field] + '\x00'
+            msg += host.data.get(field,'') + '\x00'
         msg += '\x01'
         l = byteencode.uint16(len(msg) + 2)
         msg = l + msg
