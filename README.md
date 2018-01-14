@@ -46,5 +46,5 @@ Credits
 - [Caledorn] - users on realmsbeyond.net, for running the initial natneg server
 - [SexIsBad2TheBone], [DimosEngel] civ4 players (testing)
 - [GameSpy] for not being too hard encrypted and secretive [Rest in peace]
-- [Sid Meyer and Firaxis] for great game
+- [Sid Meier and Firaxis] for great game
 - [Zulan] code cleanup and server hosting
