@@ -371,7 +371,10 @@ class SBQRServer:
                 else:
                     (conn, addr) = x.accept()
                     conn.setblocking(0)
-                    self.clients[conn] = SBClient(self, conn)
+                    try:
+                        self.clients[conn] = SBClient(self, conn)
+                    except IOError as e:
+                        print('Failed to create SBClient: %s' % (e,))
                     print('Accepted sb connection from %s:%s.' % (addr[0], addr[1]))
             for x in wlst:
                 if x in self.clients:  # client may have been disconnected
